@@ -1,0 +1,34 @@
+---
+title: "Tibble Exploration"
+author: "Ning Shen"
+date: "2019/9/10"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+    theme: cerulean
+---
+
+```{r load, warning=FALSE, echo=FALSE}
+library(gapminder)
+library(tibble)
+library(DT)
+```
+
+##Print out gapminder data:
+
+```{r}
+gapminder
+```
+
+<!--This is a comment-->
+
+
+##Convert matcars to a tibble:
+
+```{r}
+datatable(as_tibble(mtcars))
+```
+
+
