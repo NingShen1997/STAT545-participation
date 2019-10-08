@@ -81,7 +81,7 @@ guest_long %>%
 ```
 
 4. Which parties still have a "PENDING" status for all members for the wedding?
-
+ 
 ```{r}
 guest %>% 
   group_by(party) %>% 
@@ -117,9 +117,9 @@ email %>%
 
 ```{r}
 n <- 100
-FILL_THIS_IN(label = FILL_THIS_IN,
-             FILL_THIS_IN = rnorm(n),
-             FILL_THIS_IN)
+tibble(label = "Sample A",
+       x = rnorm(n),
+       y = x + rnorm(n))
 ```
 
 
@@ -145,7 +145,7 @@ experiment <- tibble(
   measurement_1 = runif(6),
   measurement_2 = runif(6)
 )
-experiment %>% expand(name, trt, rep)
+experiment %>% complete(nesting(name, trt), rep)
 ```
 
 

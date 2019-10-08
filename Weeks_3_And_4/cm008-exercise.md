@@ -152,6 +152,20 @@ gapminder %>%
 
 ![](cm008-exercise_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
+```r
+gapminder %>% 
+  filter(continent == "Americas") %>% 
+  ggplot(aes(lifeExp, country)) + 
+  geom_density_ridges() +
+  geom_rug()
+```
+
+```
+## Picking joint bandwidth of 3.63
+```
+
+![](cm008-exercise_files/figure-html/unnamed-chunk-8-2.png)<!-- -->
+
 ### 5(b) Ridgeplots
 
 We're starting with the same plot as above, but instead of the points + boxplot, try a ridge plot instead using `ggridges::geom_density_ridges()`, and adjust the `bandwidth`.

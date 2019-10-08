@@ -130,6 +130,12 @@ gapminder %>%
   ggplot(aes(country, lifeExp)) + 
   geom_point() +
   geom_boxplot()
+
+gapminder %>% 
+  filter(continent == "Americas") %>% 
+  ggplot(aes(lifeExp, country)) + 
+  geom_density_ridges() +
+  geom_rug()
 ```
 
 ### 5(b) Ridgeplots
