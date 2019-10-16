@@ -117,8 +117,8 @@ p %>%
 gapminder %>%
   plot_ly(x = ~gdpPercap, y = ~lifeExp, color = ~continent, type="scatter", mode="markers")
 
-Sys.setenv("plotly_username"="chengx32")
-Sys.setenv("plotly_api_key"="jveX6MVe6BZf6koWWsxt")
+Sys.setenv("plotly_username"="nshen7")
+Sys.setenv("plotly_api_key"="qwert19970809")
 
 api_create(p, filename="cm013_example")
 ```
